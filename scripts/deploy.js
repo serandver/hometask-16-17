@@ -10,6 +10,7 @@ async function main() {
   
   const SakToken = await hre.ethers.deployContract("SAKToken");
   const sakToken = await SakToken.waitForDeployment();
+  console.log("Contract deployed to " + sakToken.target);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
